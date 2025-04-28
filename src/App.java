@@ -1,5 +1,10 @@
+import java.util.ArrayList;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Alô, Git!");
+        System.out.println("\t\t--JStatistics--");
+        System.out.print("-- Controle de Dados Empresarial --\t");
+        System.out.print("2025");
+        // ArrayList lista = new ArrayList();
     }
 }
