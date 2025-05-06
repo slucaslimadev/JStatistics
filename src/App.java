@@ -18,7 +18,7 @@ public class App {
         String mensagem = "Espaço amostral:{Cara, Coroa}\n"+
                             "Probabilidade de Cara:50%\n"+
                             "Probabilidade de Coroa:50%\n"+
-                            "Deseja lançar a moeda?";
+                            "Deseja lançar a moeda??";
         
         //LOOP
         while(true){
