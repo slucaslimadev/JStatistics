@@ -4,14 +4,12 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-    // Exercicio 2: Cadastro simples de cliente - Entrada e exibição do nome e endereço.
-    String nome;
-    String endereco;
-    JOptionPane.showMessageDialog(null, "Jardim Verde: Sistema de controle de Jardinagem");
-    JOptionPane.showMessageDialog(null, "Cadastro de cliente");
-    nome = JOptionPane.showInputDialog("Digite seu nome: ");
-    endereco = JOptionPane.showInputDialog("Digite seu endereço: ");
-    JOptionPane.showMessageDialog(null, "Dados cadastrados:\nNome: "+nome+"\nEndereço: "+endereco, "Jardim Verde", JOptionPane.DEFAULT_OPTION);
+    // Exercicio 3: Área do jardim - Calcula a área a partir da largura e comprimento.
+    JOptionPane.showMessageDialog(null, "Calculadora de Área");
+    Double largura = Double.parseDouble(JOptionPane.showInputDialog("Digite a largura:"));
+    Double comprimento = Double.parseDouble(JOptionPane.showInputDialog("Digite o comprimento:"));
+    Double calcArea = (largura * comprimento);
+    JOptionPane.showMessageDialog(null, "Largura: "+largura+"\nComprimento: "+comprimento+"\nCalculo da Área: "+calcArea);
 
 
     }
