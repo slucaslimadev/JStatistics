@@ -9,10 +9,14 @@ public class App {
        for (int i = 1; i<= n; i++){
         double Area = Double.parseDouble(JOptionPane.showInputDialog("Digite a Área do seu jardim: "+ i));
         someAreas+=Area;
-        
 
-       }
-       double mediaArea = someAreas / n;
-       JOptionPane.showMessageDialog(null, "\nA média da área dos " + n + " jardins é: " + mediaArea);
+
+    }
+    double mediaArea = someAreas / n;
+    JOptionPane.showMessageDialog(null, "\nA média da área dos " + n + " jardins é: " + mediaArea);
+    if(Area >= 100.0){
+        
+    }
+
     }
 }
