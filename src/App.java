@@ -1,46 +1,52 @@
+import javax.swing.JOptionPane;
 import java.util.Random;
 
-import javax.swing.JOptionPane;
+public class JogoDados {
+    public static void main(String[] args) {
+        // Desafio Jogo de Dados
+        // Variável para receber a interação do jogo
+        // Random
+        // Switch
+        // For, Do While e While
 
-public class App {
-    public static void main(String[] args) throws Exception {
-        System.out.println("Sozinhos\r\n" + //
-                        "Faça como eu fiz\r\n" + //
-                        "\r\n" + //
-                        "Criar um jogo de lançar dados similar ao jogo do cara ou cora.\r\n" + //
-                        "=============================================================\r\n" + //
-                        "Estudar , pesquisar e escolher um dos métodos estatísticos\r\n" + //
-                        "\r\n" + //
-                        "Bonus+\r\n" + //
-                        "\r\n" + //
-                        "-P(A) - calculo simples\r\n" + //
-                        "-Teorema de Bayes. avançado");
-     
-        
+        // Número de lados do dado
+        int numLados = 6;
+        String[] ladosDoDado = new String[numLados];
+        for (int i = 0; i < numLados; i++) {
+            ladosDoDado[i] = "Lado " + (i + 1);
+        }
 
-        //Vendo a probabilidade de sair o lado 6
-        double probabilidade6 = (1.0 / 6.0)*100; // Probabilidade de tirar 6 em um dado
-        JOptionPane.showMessageDialog(null,"P(l) = " + probabilidade6);
-       
-        //176 - quantidade de vezes que jogou
-        //múltiplas jogadas
-        // 6
-
-        //qual a possibilidade de sair um par
-        //1 2 3 4 5 6 {2,4,6}
-        double probabilidadePar = (3.0 / 6.0)*100; // Probabilidade de tirar 6 em um dado
-        JOptionPane.showMessageDialog(null,"P(par/impar) = " + probabilidadePar);
-        //1 2 3 4 5 6 -- QUal a probabilidade de sair um número maior que 4?
-        double probabilidadeMaior4 = (2 / 6.0)*100; // Probabilidade de tirar 6 em um dado
-        JOptionPane.showMessageDialog(null,"P(acima de 4) = " + probabilidadeMaior4);
-       
-        //Lançando dados
+        // Random
         Random random = new Random();
-        int dado = random.nextInt(6) + 1; // Simula um dado de  naturalmente
-        System.out.println("Resultado do dado: " + dado);
-        JOptionPane.showMessageDialog(null, "Resultado do dado"+dado);
-        // de sair 6 
-        // manter esse equilibro
-        // de NÃO 6
+
+        // Contadores
+        int totalLancamentos = 0;
+        int[] contagemLados = new int[numLados]; // Para contar quantas vezes cada lado cai
+        String mensagem = "Bem-vindo ao Jogo de Dados!\n" +
+                "Espaço Amostral: {Lado 1, Lado 2, Lado 3, Lado 4, Lado 5, Lado 6}\n" +
+                "Probabilidade de cada lado: " + (100.0 / numLados) + "%\n" +
+                "Deseja lançar o dado?";
+
+        // Loop
+        while (true) {
+            int opcao = JOptionPane.showConfirmDialog(null, mensagem, "Lançando Dados", JOptionPane.YES_NO_OPTION);
+            if (opcao != JOptionPane.YES_OPTION) {
+                StringBuilder estatisticas = new StringBuilder("Jogo finalizado!\n");
+                estatisticas.append("Total de lançamentos: ").append(totalLancamentos).append("\n");
+
+                for (int i = 0; i < numLados; i++) {
+                    estatisticas.append("Total ").append(ladosDoDado[i]).append(": ").append(contagemLados[i]).append("\n");
+                }
+                JOptionPane.showMessageDialog(null, estatisticas.toString(), "Finalizando Jogo", JOptionPane.INFORMATION_MESSAGE);
+                break;
+            }
+
+            int resultado = random.nextInt(numLados); // Gera um número de 0 a 5
+            contagemLados[resultado]++;
+            totalLancamentos++;
+
+            String saida = "Resultado do lançamento: " + ladosDoDado[resultado] + "\nÍndice gerado: " + resultado;
+            JOptionPane.showMessageDialog(null, saida, "Resultado", JOptionPane.INFORMATION_MESSAGE);
+        }
     }
 }
