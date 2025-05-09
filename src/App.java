@@ -3,7 +3,7 @@ import javax.swing.JOptionPane;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        // Exercicio 6: Desconto por fidelidade - Aplica desconto com base na quantidade de serviços.
+        // Exercicio 7: Cadastro de vários serviços - Usa loop até usuário digitar 'sair'.
         int opcaoServicos;
         int[] quantidadeServicos = new int[7];
         double desconto = 0.0;
@@ -93,8 +93,8 @@ public class App {
                 break;
 
                 case 0:
-                int sair = Integer.parseInt(JOptionPane.showInputDialog(null, "Realmente deseja sair?\nDigite:\n1- Sim\n2- Não"));
-                if (sair == 1) {
+                String sair = JOptionPane.showInputDialog(null, "Realmente deseja sair?\nDigite:\nSim\nNão");
+                if (sair.equalsIgnoreCase("sim")) {
                     JOptionPane.showMessageDialog(null, "Saindo do sistema...");
                     JOptionPane.showMessageDialog(null, "Resumo da Compra:\n" +
                     "Valor Total: " + valorTotal + "\n" +
