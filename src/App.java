@@ -3,24 +3,15 @@ import javax.swing.JOptionPane;
 
 public class App {
     public static void main(String[] args) throws Exception {
-       // 8. Média da área dos jardins - Calcula a média de N áreas.
-       int n = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite a quantidade de Áreas que você Deseja calcular"));
-       double someAreas = 0;
-       double Area = 0;
-       for (int i = 1; i<= n; i++){
-        Area = Double.parseDouble(JOptionPane.showInputDialog("Digite a Área do seu jardim: "+ i));
-        someAreas+=Area;
+        //Nível 4 - Vetores Básicos
+       // 10. Armazenar áreas em vetor - Armazena e exibe áreas.
+       int n = Integer.parseInt(JOptionPane.showInputDialog("Digite o número de Áreas: "));
+       double[] areas = new double[n];
+         for (int i = 0; i < n; i++) {
+              areas[i] = Double.parseDouble(JOptionPane.showInputDialog("Digite a área " + (i + 1) + ": "));
+              
+         }
+         JOptionPane.showMessageDialog(null, "Vetores: "+java.util.Arrays.toString(areas));
 
-
-    }
-    double mediaArea = someAreas / n;
-    JOptionPane.showMessageDialog(null, "\nA média da área dos " + n + " jardins é: " + mediaArea);
-    if(Area > 100){
-        JOptionPane.showMessageDialog(null,"\nVocê tem: "+ n + " jardins com área maior que 100 m²");
-
-    } 
-    else{
-        JOptionPane.showMessageDialog(null,"\nVocê tem: "+ n + " jardins com área menor que 100 m²");
-    }
 }
 }
