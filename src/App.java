@@ -4,23 +4,15 @@ import javax.swing.JOptionPane;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        // Nível 5 - Funções e Procedimentos (sem OO)
-        // 13. Função para calcular área - Função recebe largura e comprimento.
-        
-        calcularArea area = new calcularArea();
-        // Inputs para receber largura e comprimento
-        double largura = Double.parseDouble(JOptionPane.showInputDialog("Digite a largura: "));
-        double comprimento = Double.parseDouble(JOptionPane.showInputDialog("Digite o comprimento: "));
-
-        // Chama o método setLargura e setComprimento
-        area.setLargura(largura);
-        area.setComprimento(comprimento);
-        // Resultado
-        double resultado = (largura * comprimento);
-        JOptionPane.showMessageDialog(null, "Largura: " + area.getLargura() + "\nComprimento: " + area.getComprimento() + "\nÁrea: " + resultado);
-
-
-
+        //14. Procedimento para exibir dados do cliente - Exibe dados com JOptionPane
+        exibirCliente cliente = new exibirCliente();
+        cliente.setNome(JOptionPane.showInputDialog("Digite o nome:"));
+        cliente.setIdade(Integer.parseInt(JOptionPane.showInputDialog("Digite a idade:")));
+        cliente.setCpf(JOptionPane.showInputDialog("Digite o CPF:"));
+        cliente.setEndereco(JOptionPane.showInputDialog("Digite o endereço:"));
+        cliente.setTelefone(JOptionPane.showInputDialog("Digite o telefone:"));
+        cliente.setEmail(JOptionPane.showInputDialog("Digite o email:"));
+        JOptionPane.showMessageDialog(null, "Nome: "+cliente.getNome()+"\nIdade: "+cliente.getIdade()+"\nCPF: "+cliente.getCpf()+"\nEndereço: "+cliente.getEndereco()+"\nTelefone: "+cliente.getTelefone()+"\nEmail: "+cliente.getEmail(), "Dados do Cliente", JOptionPane.INFORMATION_MESSAGE);
 
 
 }
