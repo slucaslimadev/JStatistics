@@ -1,24 +1,27 @@
-import java.util.Arrays;
 import javax.swing.JOptionPane;
+
 
 
 public class App {
     public static void main(String[] args) throws Exception {
-        // 12. Ordenar serviços por valor - Ordena vetor de valores.
-        int numServicos = Integer.parseInt(JOptionPane.showInputDialog("Digite o número de serviços:"));
-        // Arrays
-        double[] valores = new double[numServicos];
-        for(int i=0; i < numServicos; i++){
-            valores[i] = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do serviço " + (i+1) + ":"));
-        }
+        // Nível 5 - Funções e Procedimentos (sem OO)
+        // 13. Função para calcular área - Função recebe largura e comprimento.
+        
+        calcularArea area = new calcularArea();
+        // Inputs para receber largura e comprimento
+        double largura = Double.parseDouble(JOptionPane.showInputDialog("Digite a largura: "));
+        double comprimento = Double.parseDouble(JOptionPane.showInputDialog("Digite o comprimento: "));
 
-        Arrays.sort(valores);
-        JOptionPane.showMessageDialog(null, "Valores ordenados: " + Arrays.toString(valores));
+        // Chama o método setLargura e setComprimento
+        area.setLargura(largura);
+        area.setComprimento(comprimento);
+        // Resultado
+        double resultado = (largura * comprimento);
+        JOptionPane.showMessageDialog(null, "Largura: " + area.getLargura() + "\nComprimento: " + area.getComprimento() + "\nÁrea: " + resultado);
 
 
-    }
 
 
 
 }
-
+}
