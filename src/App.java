@@ -14,7 +14,7 @@ public class App {
     // Nível 2 - Estrutura de Seleção
     //Verificar tamanho do jardim - Classifica como Grande ou Pequeno.
 
-    if(calcArea <= 20){
+    if(calcArea <= 100){
         JOptionPane.showMessageDialog(null, "Jardim cadastrado é Pequeno");
     }else {
         JOptionPane.showMessageDialog(null, "Jardim cadastrado é grande");
