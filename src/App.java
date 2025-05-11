@@ -12,6 +12,11 @@ public class App {
               
          }
          JOptionPane.showMessageDialog(null, "Vetores: "+java.util.Arrays.toString(areas));
+        // 11. Moda das áreas - Calcula o valor mais frequente.
+        double moda = areas[0];
+        JOptionPane.showMessageDialog(null, "A moda é: " + moda);
+
+
 
 }
 }
