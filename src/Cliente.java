@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-public class App {
+public class Cliente {
     public static void main(String[] args) throws Exception {
         // Nível 6 - Funções e Procedimentos com OO
         // 16. Classe Cliente com método exibir() - Mostra dados do cliente.
