@@ -12,9 +12,9 @@ public class Servico {
         JOptionPane.showMessageDialog(null, "Serviço: "+item1.getServico()+"\nValor Original: "+item1.getValor()+"\nDesconto: "+ (item1.getDesconto() * 100) + "%" + "\nValor com Desconto: " + item1.aplicarDesconto());
 
         AplicarDesconto item2 = new AplicarDesconto();
-        item2.setServico("Pintura Externa");
+        item2.setServico("Paisagismo e Projetos de Jardim");
         item2.setValor(1200.0); // Valor abaixo de 1500
-        item2.setDesconto(0.05); // Exemplo de desconto de 5% (não será aplicado totalmente)
+        item2.setDesconto(0.00); // 
         JOptionPane.showMessageDialog(null, "Serviço: "+item2.getServico()+"\nValor Original: "+item2.getValor()+"\nDesconto: "+ (item2.getDesconto() * 100) + "%" + "\nValor com Desconto: " + item2.aplicarDesconto());
     }
-}
+}   

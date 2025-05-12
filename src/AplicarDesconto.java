@@ -3,7 +3,7 @@ public class AplicarDesconto {
     private double valor;
     private double desconto;
     private String servico;
-    private double apDesconto;
+
 
 
 
