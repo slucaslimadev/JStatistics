@@ -13,6 +13,7 @@ public class App {
 
 
     }
+
     // 9. Contar quantos jardins são grandes - Conta os jardins com área > 100m2.
     double mediaArea = someAreas / n;
     JOptionPane.showMessageDialog(null, "\nA média da área dos " + n + " jardins é: " + mediaArea);
